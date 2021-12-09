@@ -12,8 +12,11 @@
     "url": "git+https://github.com/ingio/console-app.git"
   },
   "keywords": [
-    "console"
-  ],
+		"cli",
+		"spinner",
+		"terminal",
+		"console"
+	],
   "author": "Ingi",
   "license": "SEE LICENSE IN ./LICENSE file",
   
