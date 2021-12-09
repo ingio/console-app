@@ -15,7 +15,8 @@
     "console"
   ],
   "author": "Ingi",
-  "license": "MIT",
+  "license": "SEE LICENSE IN ./LICENSE file",
+  
   "bugs": {
     "url": "https://github.com/ingio/console-app/issues"
   },
