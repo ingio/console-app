@@ -1,0 +1,32 @@
+{
+  "name": "console-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ingio/console-app.git"
+  },
+  "keywords": [
+    "console"
+  ],
+  "author": "Ingi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ingio/console-app/issues"
+  },
+  "homepage": "https://github.com/ingio/console-app#readme",
+  "dependencies": {
+    "@azure/identity": "^2.0.1",
+    "@azure/keyvault-keys": "^4.3.0",
+    "colors": "^1.4.0",
+    "commander": "^8.3.0",
+    "dotenv": "^10.0.0",
+    "inquirer": "^8.2.0",
+    "ora": "^6.0.1"
+  }
+}
