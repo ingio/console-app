@@ -26,7 +26,7 @@ async function list() {
             console.log("### Client Creds were not found in the .env file ###".red);
             console.log("Create .env file in app root with:".yellow);
             console.log("clientid: ".yellow + "<your spn id>\n" + "clientsecret: ".yellow + "<your secret>\n" + "tenant: ".yellow + "<your tenant id>");
-            console.log("you entered: " credentials)
+            console.log("you entered: " + credentials)
         } else {
             console.log('\nCreds Found!')
             //const creds = JSON.stringify(credential);
