@@ -24,8 +24,8 @@
   },
   "homepage": "https://github.com/ingio/console-app#readme",
   "dependencies": {
-    "@azure/identity": "^3.1.0",
-    "@azure/keyvault-keys": "^4.7.0",
+    "@azure/identity": "^4.13.0",
+    "@azure/keyvault-keys": "^4.10.0",
     "colors": "^1.4.0",
     "commander": "^9.0.0",
     "dotenv": "^16.0.0",
