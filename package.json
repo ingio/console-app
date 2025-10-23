@@ -12,25 +12,27 @@
     "url": "git+https://github.com/ingio/console-app.git"
   },
   "keywords": [
-		"cli",
-		"spinner",
-		"terminal",
-		"console"
-	],
+    "cli",
+    "spinner",
+    "terminal",
+    "console"
+  ],
   "author": "Ingi",
   "license": "SEE LICENSE IN ./LICENSE file",
-  
   "bugs": {
     "url": "https://github.com/ingio/console-app/issues"
   },
   "homepage": "https://github.com/ingio/console-app#readme",
   "dependencies": {
-    "@azure/identity": "^3.1.0",
-    "@azure/keyvault-keys": "^4.7.0",
+    "@azure/identity": "^4.13.0",
+    "@azure/keyvault-keys": "^4.10.0",
     "colors": "^1.4.0",
     "commander": "^9.0.0",
     "dotenv": "^16.0.0",
     "inquirer": "^9.1.4",
     "ora": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^9.38.0"
   }
 }
