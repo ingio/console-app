@@ -8,11 +8,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- Azure Resource Group listing functionality
+- `@azure/arm-resources` package (v7.0.0) for Azure resource management
+- `cli-table3` package (v0.6.5) for formatted table output
+- Table display showing resource group name, location, status, and tags
+- Support for `AZURE_SUBSCRIPTION_ID` environment variable
+- Azure authentication using ClientSecretCredential
 - ESLint configuration for code quality enforcement
 - ESLint 9 with recommended rules for JavaScript
 - Changelog file to track project changes
 
 ### Changed
+- Enhanced `list` command to fetch and display Azure resource groups instead of just validating credentials
+- Updated credential validation to include subscription ID requirement
+- Improved error messages with better formatting and instructions
 - Updated `@azure/identity` from 3.1.0 to 4.13.0
 - Updated `@azure/keyvault-keys` from 4.7.0 to 4.10.0
 - Standardized code formatting to 2-space indentation

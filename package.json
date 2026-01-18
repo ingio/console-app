@@ -24,8 +24,10 @@
   },
   "homepage": "https://github.com/ingio/console-app#readme",
   "dependencies": {
+    "@azure/arm-resources": "^7.0.0",
     "@azure/identity": "^4.13.0",
     "@azure/keyvault-keys": "^4.10.0",
+    "cli-table3": "^0.6.5",
     "colors": "^1.4.0",
     "commander": "^9.0.0",
     "dotenv": "^16.0.0",
