@@ -17,6 +17,7 @@ A Node.js command-line application for managing Azure resources. Currently suppo
 - Node.js (v14 or later)
 - Azure subscription
 - Azure Service Principal with appropriate permissions to read resource groups
+  Make use of Entra ID to GitHub federation to skip ising any secrets.
 
 ## Installation
 
@@ -30,7 +31,7 @@ Create a `.env` file in the project root with your Azure credentials:
 
 ```bash
 AZURE_CLIENT_ID=<your-service-principal-id>
-AZURE_CLIENT_SECRET=<your-service-principal-secret>
+AZURE_CLIENT_SECRET=<your-service-principal-secret> # if not federated
 AZURE_TENANT_ID=<your-azure-tenant-id>
 AZURE_SUBSCRIPTION_ID=<your-azure-subscription-id>
 ```
