@@ -17,7 +17,7 @@ A Node.js command-line application for managing Azure resources. Currently suppo
 - Node.js (v14 or later)
 - Azure subscription
 - Azure Service Principal with appropriate permissions to read resource groups.  
-  Make use of Entra ID to GitHub federation to skip ising any secrets.
+  Make use of Entra ID federation when possible.  
 
 ## Installation
 
