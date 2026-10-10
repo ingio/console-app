@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // eslint-disable-next-line no-unused-vars
 const colors = require('colors');
-const program = require('commander');
+const { program } = require('commander');
 const Table = require('cli-table3');
 const { ClientSecretCredential } = require('@azure/identity');
 const { ResourceManagementClient } = require('@azure/arm-resources');

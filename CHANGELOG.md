@@ -17,6 +17,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - ESLint configuration for code quality enforcement
 - ESLint 9 with recommended rules for JavaScript
 - Changelog file to track project changes
+- `.nvmrc` and `engines.node >=24` pinning the project to Node.js 24 LTS (Krypton)
+- `@eslint/js` dev dependency; ESLint now actually applies the recommended rule set
+- `npm run lint` and `npm run lint:fix` scripts
 
 ### Changed
 - Enhanced `list` command to fetch and display Azure resource groups instead of just validating credentials
@@ -27,8 +30,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Standardized code formatting to 2-space indentation
 - Converted all double quotes to single quotes for consistency
 - Updated package-lock.json to lockfile version 3
+- ESLint `ecmaVersion` set to `latest`
+- Updated dependencies within semver ranges: `@azure/identity` 4.13.3, `@azure/keyvault-keys` 4.10.2, `dotenv` 17.4.2, `eslint` 10.12.0, `inquirer` 13.4.3, `ora` 9.4.1
 
 ### Fixed
+- App crashed on startup with `TypeError: program.command is not a function` — commander v14 exports `{ program }`, not a default instance
 - **Security**: Fixed Azure Identity Libraries Elevation of Privilege Vulnerability (GHSA-m5vv-6r4h-3vj9, CVSS 5.5)
 - Fixed 45 ESLint warnings in index.js:
   - 17 quote style inconsistencies
@@ -41,6 +47,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 - Resolved all npm audit vulnerabilities (1 moderate → 0)
 - Updated Azure SDK packages to address security advisories
+- Fixed 3 npm audit vulnerabilities (2 moderate, 1 high — `brace-expansion` DoS advisories) via `npm audit fix`
 
 ## [1.0.0] - Previous Release
 
