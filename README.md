@@ -1,10 +1,12 @@
 # Console App
 
-A Node.js command-line application for managing Azure resources. Currently supports listing Azure resource groups in a formatted table.
+A Node.js command-line application for managing Azure resources. Supports listing the subscriptions in your tenant and the resource groups in one or all subscriptions, in formatted tables.
 
 ## Features
 
-- List all Azure resource groups in your subscription
+- List all subscriptions in the tenant (name, subscription ID, state)
+- List Azure resource groups across every subscription in the tenant (or one, with `--subscription`)
+- Each resource group table is headed by the subscription name and ID
 - Display results in a formatted table with:
   - Resource group name
   - Location (Azure region)
@@ -14,7 +16,7 @@ A Node.js command-line application for managing Azure resources. Currently suppo
 
 ## Prerequisites
 
-- Node.js (v14 or later)
+- Node.js 24 LTS or later (see `.nvmrc`)
 - Azure subscription
 - Azure Service Principal with appropriate permissions to read resource groups.  
   Make use of Entra ID federation when possible.  
@@ -32,24 +34,38 @@ Create a `.env` file in the project root with your Azure credentials:
 ```bash
 AZURE_CLIENT_ID=<your-service-principal-id>
 AZURE_CLIENT_SECRET=<your-service-principal-secret> # if not federated
-AZURE_TENANT_ID=<your-azure-tenant-id>
-AZURE_SUBSCRIPTION_ID=<your-azure-subscription-id>
-```
+AZURE_TENANT_ID=<your-azure-tenant-id>```
+
+The service principal only sees subscriptions it has a role on (e.g. Reader).
 
 ## Usage
 
-List all resource groups:
+List all subscriptions in the tenant:
+
+```bash
+node index.js subscriptions
+```
+
+List resource groups in every subscription in the tenant:
 
 ```bash
 node index.js list
+```
+
+List resource groups in a single subscription:
+
+```bash
+node index.js list --subscription <subscription-id>
 ```
 
 ## Example Output
 
 ```
 Authenticating with Azure...
-Fetching resource groups...
+Fetching subscriptions...
 
+Subscription: my-subscription (00000000-0000-0000-0000-000000000000)
+Fetching resource groups...
 Found 3 resource group(s):
 
 ┌────────────────────────────┬──────────────────┬───────────────┬────────────────────────────────────────┐
