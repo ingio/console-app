@@ -34,7 +34,7 @@
     "colors": "^1.4.0",
     "commander": "^14.0.2",
     "dotenv": "^17.2.3",
-    "inquirer": "^13.2.0",
+    "inquirer": "^14.2.3",
     "ora": "^9.0.0"
   },
   "devDependencies": {
